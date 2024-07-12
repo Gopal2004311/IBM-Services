@@ -1,0 +1,931 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --light-green: #34693d;
+  --lightBlue: #236bf1;
+  --background: #18435f;
+  --gray: #7a7976;
+  --light-gray: #cac9c8;
+  --grayDark: #353535;
+  --light: #faf9f8;
+  --white: white;
+  --bg-text: #e9e6e6;
+  --purple: #4a178b;
+  --width: calc(100% - 0.5rem);
+  --gil-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  margin: 0.5rem;
+  width: calc(100% - 0.5rem);
+  padding: 0.1rem;
+  background: var(--white);
+  /* box-shadow: 1px 1px 4px var(--gray); */
+}
+.nav-links {
+  text-align: center;
+  margin: auto auto;
+}
+.nav-links ul {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.nav-links ul li {
+  list-style: none;
+  margin-inline-end: 2rem;
+}
+
+.nav-heading {
+  width: fit-content;
+  padding: 0.1rem;
+}
+.nav-heading img {
+  height: 3rem;
+  width: 7rem;
+  margin: auto 0.5rem;
+  background: transparent;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+  color: var(--grayDark);
+}
+
+.nav-links ul li a::after {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 0;
+  transition: all 1s ease;
+  border-bottom: 2px solid var(--lightBlue);
+}
+
+.nav-links ul li a:hover:after {
+  width: 100%;
+}
+.nav-links ul li a:hover {
+  color: var(--lightBlue);
+}
+.search-bar {
+  width: 44%;
+  position: relative;
+  display: flex;
+  margin-right: 0.5rem;
+}
+.search-icon {
+  position: absolute;
+  top: auto;
+  color: var(--gray) !important;
+  left: 30rem;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: none !important;
+}
+
+/*hero section start here*/
+#hero-section {
+  height: 20rem;
+  margin: 0.5rem;
+  width: var(--width);
+}
+
+.hero-background .image-text {
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+}
+.hero-info {
+  font-size: 3.5rem;
+  color: var(--light);
+}
+
+.hero-background .buttons {
+  gap: 1rem;
+  display: flex;
+  width: fit-content;
+}
+
+#hero-section .hero-background {
+  background: url('./../img/backgroundImage.jpg');
+  height: 35rem;
+  width: 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/*Service Section Start here*/
+#service {
+  position: relative;
+  top: 14rem;
+  height: 55rem;
+  width: var(--width);
+}
+.head {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  padding-block: 1rem;
+}
+.head .background-text {
+  font-size: 4rem;
+  color: var(--bg-text);
+  text-decoration: wavy;
+  filter: blur(1px);
+}
+.head .main-heading {
+  color: var(--grayDark);
+  position: absolute;
+  top: 2rem;
+  left: 29rem;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-inline: auto;
+}
+
+.service-list ul li {
+  list-style: none;
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: -1rem;
+  transition: all 0.5s ease;
+}
+
+.service-list ul li a {
+  text-decoration: none;
+  color: var(--grayDark);
+}
+
+.service-list ul li:hover {
+  border: 1px solid var(--lightBlue);
+  border-radius: 4px;
+}
+
+.service-list {
+  text-align: left;
+  background: var(--light);
+  margin: 0.5rem auto 0.5rem -15rem;
+  height: 27rem;
+  overflow: scroll;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.service-section {
+  width: 100%;
+  margin-left: 9rem;
+}
+
+.service-details {
+  height: 27rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+.service-details .service-content {
+  width: 130%;
+}
+.service-details .service-content .heading {
+  text-align: left;
+}
+.service-details .service-content .heading h1 {
+  margin: 1rem;
+  font-size: 2rem;
+  color: var(--gray);
+}
+.service-details .service-content .service-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-details .service-content .service-container a {
+  text-decoration: none;
+}
+.service-details .service-content .service-container .content {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: var(--grayDark);
+  padding-inline: 2rem;
+  cursor: pointer;
+  height: 10rem;
+  transition: all 0.2s ease;
+  width: 20rem;
+}
+.service-details .service-content .service-container .content:hover {
+  background-color: var(--light-gray);
+}
+.service-details .service-content .service-container .content h4,
+p {
+  text-align: left;
+}
+
+/* Consultant Section start here*/
+#consultants {
+  width: var(--width);
+  height: 20rem;
+  margin-top: -4rem;
+}
+.consultant {
+  width: var(--width);
+}
+.ibm-consultant {
+  width: 100%;
+  align-items: center;
+}
+.ibm-consultant .head {
+  width: 100%;
+}
+.ibm-consultant .head .background-text {
+  font-size: 4rem;
+  color: var(--bg-text);
+  text-decoration: wavy;
+  filter: blur(1px);
+  margin-left: 24rem;
+}
+
+.ibm-consultant .head .main-heading {
+  position: absolute;
+  top: 2rem;
+  left: 35rem;
+}
+
+.description h2 {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.description p {
+  padding: 0 2rem;
+}
+
+.ibm-consultant .members {
+  height: 60rem;
+  width: var(--width);
+  margin-inline: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.ibm-consultant .members img {
+  margin-left: 0.7rem;
+  overflow: hidden;
+  height: 25rem;
+  margin-block: 0.5rem;
+  width: 20rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ibm-consultant .members img:hover {
+  padding: 0.5rem;
+}
+/*Technology section start here*/
+#technology {
+  position: relative;
+  top: 50rem;
+  height: 16rem;
+}
+
+#technology .head .background-text {
+  position: relative;
+  left: 27rem;
+}
+#technology .head .main-heading {
+  margin-left: 7rem;
+}
+
+#technology .tech-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 1rem;
+}
+#technology .tech-info .content {
+  width: 18rem;
+  height: 9rem;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+#technology .tech-info .content .img h1 {
+  font-size: 2.5rem;
+}
+#technology .tech-info .content .text .description {
+  display: none;
+  transition: all 0.5s ease;
+}
+#technology .tech-info .content .text h5 {
+  margin-top: 0.8rem;
+  transition: all 0.5s ease;
+}
+
+#technology .tech-info .content:hover .text .description {
+  display: block;
+}
+
+#technology .tech-info .content:hover .text h5 {
+  margin-top: -0.8rem;
+}
+#technology .tech-info .content:hover .img {
+  display: none;
+}
+#technology .tech-info .content:hover {
+  background-color: var(--light-gray);
+  border: none;
+}
+
+/*Contact section start here*/
+#contact {
+  position: relative;
+  top: 80rem;
+}
+
+#contact .contact {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#contact .head .background-text {
+  position: relative;
+  left: 32rem;
+}
+#contact .head .main-heading {
+  margin-left: 7rem;
+}
+#contact .contact .contact-form {
+  width: 50%;
+  padding: 1rem 2rem;
+}
+
+#contact .contact .contact-form form .form-element {
+  margin-top: 2rem;
+}
+
+.form-element textarea {
+  resize: none;
+}
+
+#contact .contact .contact-info {
+  background-color: var(--grayDark);
+  color: var(--light);
+  padding: 1rem;
+  width: 45%;
+  border-radius: 1rem;
+}
+
+/*-------------------
+         Evaluation.php style start here !!------------------*/
+
+/*Evaluation section start here!*/
+
+#evaluation .evaluation .sidebar {
+  width: 20rem;
+  height: 120rem;
+  background-color: var(--background);
+  padding: 1rem;
+}
+
+#evaluation .evaluation .sidebar ul li {
+  list-style: none;
+  /* margin-inline: -1rem; */
+  margin-left: 1rem;
+  margin-block: 0.4rem;
+  position: relative;
+  cursor: pointer;
+}
+
+#evaluation .evaluation .sidebar ul {
+  width: max-content;
+}
+
+#evaluation .evaluation .sidebar ul h4 {
+  color: var(--light);
+  margin-left: -1rem;
+}
+#evaluation .evaluation .sidebar ul li {
+  margin-left: -1rem;
+  padding: 1rem;
+}
+#evaluation .evaluation .sidebar ul li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  position: relative;
+  color: var(--light);
+  margin-inline: 0.7rem;
+  width: 100%;
+}
+#evaluation .evaluation .sidebar ul li i {
+  font-size: 1.5rem;
+  color: var(--light);
+}
+
+#evaluation .evaluation .sidebar ul li a:after {
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 0;
+  transition: all 0.5s ease;
+  border-bottom: 2px solid var(--light);
+  width: 0;
+}
+#evaluation .evaluation .sidebar ul li a:hover:after {
+  width: 100%;
+}
+
+#evaluation .evaluation .charts {
+  padding: 1rem;
+  background-color: var(--light);
+}
+
+#evaluation .evaluation .charts .info .information {
+  margin: 2rem;
+}
+
+#evaluation .evaluation .charts .info .information p {
+  font-size: 1.1rem;
+}
+
+#evaluation .evaluation .charts .info .section-heading {
+  width: 100%;
+  position: relative;
+}
+
+#evaluation .evaluation .charts .info .section-heading span {
+  font-size: 3rem;
+  margin-left: 21rem;
+  color: var(--light-gray);
+}
+
+#evaluation .evaluation .charts .info .section-heading h4 {
+  position: absolute;
+  left: 27rem;
+  font-size: 2.5rem;
+  top: 1rem;
+}
+
+#employee {
+  background-color: var(--bg-text);
+}
+.previous,
+.next {
+  border: 1px solid var(--gray);
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.previous {
+  position: relative;
+  top: 7rem;
+  left: 2.5rem;
+}
+
+.next {
+  position: relative;
+  left: 75rem;
+  top: 7rem;
+}
+
+.previous:hover,
+.next:hover {
+  background-color: var(--light-gray);
+  border: none;
+}
+#employee .head {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+}
+
+#employee .head .background-text {
+  color: var(--light-gray);
+  font-size: 3rem;
+  position: absolute;
+  left: 29rem;
+}
+
+#employee .head .main-heading {
+  margin-left: 7rem;
+  font-weight: 600;
+  margin-top: -0.5rem;
+}
+#employee .employee-opinion {
+  width: 90%;
+  height: auto;
+  padding: 1rem;
+  margin-inline: auto;
+  margin-top: -4rem;
+}
+#employee .employee-opinion .opinions {
+  margin: 1rem;
+  width: fit-content;
+  text-align: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px var(--light);
+}
+
+#employee .employee-opinion .opinions:hover {
+  background-color: var(--light-gray);
+  padding-inline: 0.5rem;
+}
+#employee .employee-opinion .opinions img {
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem 1rem;
+  border-radius: 50%;
+}
+#employee .employee-opinion .opinions p {
+  margin: 1rem 1rem;
+  height: 8rem;
+}
+
+#employee .employee-opinion .opinions span {
+  margin-bottom: 1rem;
+}
+
+/*----------------------------
+      About Us start here  
+-----------------------------*/
+#about {
+  height: auto;
+  width: 100%;
+  background-color: var(--light);
+}
+
+#about .about-section .basic-info {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  padding: 1rem;
+}
+#about .about-section .basic-info .about-img {
+  padding: 0.5rem;
+}
+
+#about .about-section .basic-info .about-img img {
+  border-radius: 4rem;
+  margin-block: 0.5rem;
+}
+
+#about .about-section .basic-info .ibm-info {
+  width: 41rem;
+  padding: 1rem;
+}
+
+#about .about-section .basic-info .ibm-info .heading {
+  width: 100%;
+  padding-block: 1rem;
+}
+#about .about-section .basic-info .ibm-info .heading h3 {
+  width: 100%;
+  text-decoration: underline;
+  font-weight: 400;
+  font-family: var(--gil-family);
+  text-align: center;
+}
+
+#about .about-section .basic-info .ibm-info .information .content p {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.01rem;
+}
+
+#about .about-section .basic-info .ibm-info .information .content ul li {
+  list-style: none;
+  margin-left: -1.3rem;
+  padding: 0.5rem;
+}
+#about .about-section .basic-info .ibm-info .information .content ul li span {
+  font-size: 1.1rem;
+}
+
+.company-projects {
+  width: 100%;
+  margin-top: -0.7rem;
+  height: auto;
+  padding-bottom: 5rem;
+}
+
+.company-projects .project-info {
+  width: 100%;
+}
+
+.company-projects .project-info .head {
+  position: relative;
+  height: auto;
+}
+
+.company-projects .project-info .head .background-text {
+  margin-left: 28rem;
+  font-size: 3rem;
+}
+
+.company-projects .project-info .head .main-heading {
+  margin-left: 6.5rem;
+}
+
+.company-projects .project-info .project-container {
+  height: fit-content;
+  width: 90%;
+  margin-top: -2rem;
+  margin-inline: 5%;
+  padding: 0.2rem;
+  display: flex;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.company-projects .project-info .project-container .project {
+  box-shadow: 1px 1px 4px var(--light-gray);
+  width: max-content;
+  cursor: pointer;
+  padding-block: 1rem;
+  border-radius: 4rem;
+  transition: all 0.5s ease;
+}
+
+.company-projects .project-info .project-container .project:hover {
+  background-color: var(--light-gray);
+}
+.company-projects .project-info .project-container .project h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.company-projects .project-info .project-container .project h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.company-projects .project-info .project-container .project p {
+  width: 20rem;
+  text-align: center;
+}
+
+.company-location {
+  height: auto;
+  width: 100%;
+  padding-block: 1rem;
+  margin-top: -1.5rem;
+}
+
+.company-location .location {
+  width: 100%;
+  height: auto;
+}
+
+.company-location .location .head {
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  position: relative;
+}
+
+.company-location .location .head .background-text {
+  margin-left: 30rem;
+  font-size: 3rem;
+}
+
+.company-location .location .head .main-heading {
+  margin-left: 6rem;
+  margin-top: -0.6rem;
+}
+
+.company-location .location .map {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.map .map-content {
+  width: 30%;
+  background-color: var(--bg-text);
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+}
+.map .map-content .data .sub-heading {
+  width: 100%;
+}
+
+.map .map-content .data .sub-heading h4 {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--background);
+}
+
+.map .map-content .content ul li {
+  list-style: none;
+  margin-block: 0.7rem;
+}
+/*--------------
+  Products & Services Start here
+  --------------------*/
+
+#products {
+  display: flex;
+}
+
+#products aside .company-products {
+  width: max-content;
+  background-color: var(--background);
+  color: var(--light);
+  padding: 1rem;
+  height: 100%;
+  user-select: none;
+}
+
+#products aside .company-products .heading {
+  width: 100%;
+  align-items: center;
+}
+
+#products aside .company-products .heading h3 {
+  font-family: var(--gil-family);
+  user-select: none;
+}
+
+#products aside .company-products .side-content {
+  margin-block: 0.5rem;
+}
+
+#products aside .company-products .side-content ul li {
+  list-style: none;
+  padding: 0.7rem 0.5rem;
+  font-size: 1.2rem;
+  color: var(--light);
+  margin-left: -1.3rem;
+}
+/* #products aside .company-products .side-content ul li i {
+  color: var(--lightBlue);
+} */
+#products aside .company-products .side-content ul li a {
+  text-decoration: none;
+  position: relative;
+  color: var(--light);
+  left: 0.4rem;
+}
+
+#products aside .company-products .side-content ul li a::after {
+  content: '';
+  position: absolute;
+  top: 110%;
+  width: 0;
+  transition: all 0.5s ease;
+  left: 0;
+  border-bottom: 2px solid var(--light);
+}
+
+#products aside .company-products .side-content ul li a:hover:after {
+  width: 100%;
+}
+
+main .main-data {
+  width: 100%;
+  padding: 1rem;
+  height: 100%;
+  background-color: var(--light);
+}
+
+main .main-data .products {
+  padding: 0.5rem;
+}
+main .main-data .products .data-container {
+  overflow: scroll;
+  height: 95rem;
+  scroll-behavior: smooth;
+}
+main .main-data .products .data-container .heading {
+  width: 100%;
+  padding: 1rem;
+}
+
+main .main-data .products .data-container .heading h3 {
+  color: var(--gray);
+  text-decoration: underline;
+}
+
+main .main-data .products .data-container .content {
+  padding: 1rem;
+}
+
+main .main-data .products .data-container .content .content-heading {
+  padding: 0.5rem;
+}
+
+main .main-data .products .data-container .content .description p {
+  font-size: 1.1rem;
+  word-spacing: 0.2rem;
+  margin-left: -1rem;
+}
+
+/*Footer Section start here*/
+#footer {
+  position: relative;
+  top: 83rem;
+}
+footer .footer-section .footer .sub-section ul li {
+  list-style: none;
+  padding: 0.7rem;
+  justify-content: space-between;
+  transition: all 1s ease;
+}
+
+footer .footer-section .footer .sub-section ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 0.2rem;
+  color: var(--light);
+}
+
+footer .footer-section .footer .sub-section ul li:hover {
+  border: 1px solid var(--light);
+  /* padding: 1rem; */
+}
+footer .footer-section .footer .sub-section ul li:hover a {
+  color: var(--lightBlue);
+}
+.footer-heading {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-heading h1 {
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.footer-heading .sub-heading {
+  margin: 4rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+}
+
+footer .footer-section .footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .footer-section .footer-last-info {
+  width: 100%;
+  display: flex;
+  gap: 15rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+footer .footer-section .footer-last-info p {
+  margin-left: 2.5rem;
+  font-size: 1.1rem;
+}
+footer .footer-section .footer-last-info .social-icons {
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+footer .footer-section .footer-last-info .social-icons a {
+  position: relative;
+}
+footer .footer-section .footer-last-info .social-icons a:hover:after {
+  content: attr(data-title);
+  position: absolute;
+  top: 75%;
+  width: 100%;
+  left: -4rem;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--background);
+  border: 1px solid var(--light);
+  background-color: var(--light);
+  padding: 0.2rem;
+}
+footer .footer-section .footer-last-info i {
+  font-size: 1.4rem;
+  margin-inline: 2rem;
+  cursor: pointer;
+}

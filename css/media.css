@@ -1,0 +1,97 @@
+@media (max-width: 500px) {
+  #navbar {
+    margin: 0.5rem;
+    width: auto;
+    padding: 0.3rem;
+    background: var(--light);
+    box-shadow: 1px 1px 6px var(--gray);
+  }
+  .nav-links {
+    text-align: center;
+    margin: auto auto;
+  }
+  .nav-links ul {
+    width: fit-content;
+    display: none;
+    margin: 0 auto;
+  }
+  .nav-links ul li {
+    list-style: none;
+    margin-inline-end: 0.5rem;
+  }
+
+  .nav-heading {
+    width: fit-content;
+    padding: 0.1rem;
+  }
+  .nav-heading h1 {
+    font-weight: 500;
+    margin: auto 0.5rem;
+    background: transparent;
+  }
+  .nav-links ul li a {
+    text-decoration: none;
+    position: relative;
+    color: var(--grayDark);
+  }
+
+  .nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 0;
+    transition: all 1s ease;
+    border-bottom: 2px solid var(--lightBlue);
+  }
+
+  .nav-links ul li a:hover:after {
+    width: 100%;
+  }
+
+  #hero-section {
+    height: 10rem;
+    margin: 0.5rem;
+    width: var(--width);
+  }
+
+  .search-bar .search-icon,
+  #search {
+    display: none !important;
+  }
+  #hero-section .hero-background {
+    position: relative;
+  }
+  #hero-section .hero-background img {
+    height: 40rem;
+    filter: brightness(1rem);
+    width: var(--width);
+  }
+
+  .search-icon {
+    position: absolute;
+    top: auto;
+    color: var(--gray) !important;
+    left: 17.5rem;
+  }
+
+  .hero-info {
+    position: absolute;
+    top: 10rem;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block !important;
+    position: absolute;
+    left: 17rem;
+    top: -1rem;
+  }
+
+  .menu-icon:hover #sub-menu {
+    display: block;
+    background-color: red;
+    height: 20rem;
+    width: 100%;
+  }
+}
