@@ -6,7 +6,6 @@
     <title>IBM Services</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/media.css" />
     <link rel="website icon" href="./img/logo1.jpg" />
     <link
       rel="stylesheet"

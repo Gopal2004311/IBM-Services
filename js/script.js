@@ -3,6 +3,8 @@
 let formElements = document.querySelectorAll('.form-data')
 let submitBtn = document.getElementById('submit')
 let form1 = document.getElementById('contactForm')
+let wrong = document.getElementById('wrong')
+let correct = document.getElementById('correct')
 let arr = new Array(3)
 formElements.forEach(ele => {
   ele.addEventListener('input', e => {
@@ -18,9 +20,6 @@ formElements.forEach(ele => {
       .then(d => {
         if (d.includes('Error')) {
           ele.nextElementSibling.innerHTML = d
-          setTimeout(() => {
-            ele.nextElementSibling.innerHTML = ''
-          }, 3000)
           if (ele.id == 'name') arr[0] = 'error1'
           if (ele.id == 'email') arr[1] = 'error2'
           if (ele.id == 'desc') arr[2] = 'error3'
@@ -28,12 +27,17 @@ formElements.forEach(ele => {
           if (ele.id == 'name') arr[0] = ''
           if (ele.id == 'email') arr[1] = ''
           if (ele.id == 'desc') arr[2] = ''
+          ele.nextElementSibling.innerHTML = ''
         }
 
         if (arr[0] == '' && arr[1] == '' && arr[2] == '') {
           submitBtn.removeAttribute('disabled')
+          wrong.style.display = 'none'
+          correct.style.display = 'block'
         } else {
           submitBtn.setAttribute('disabled', true)
+          correct.style.display = 'none'
+          wrong.style.display = 'block'
         }
       })
   })
@@ -78,6 +82,7 @@ submitBtn.addEventListener('click', e => {
             form1.reset()
           }
           submitBtn.setAttribute('disabled', true)
+          correct.style.display = 'none'
         }
       })
   }

@@ -7,7 +7,6 @@
     <link rel="website icon" href="./img/logo1.jpg">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/media.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -151,7 +150,7 @@
                   investors looking for stability and growth in the tech
                   industry.
                 </p>
-                <a href="#" class="btn btn-primary">Explore More</a>
+                <a href="https://companiesmarketcap.com/ibm/stock-price-history/" target="_blank" class="btn btn-primary">Explore More</a>
               </div>
             </div>
           </div>
@@ -175,7 +174,7 @@
                   consulting and IT services, helping organizations optimize
                   their technology and drive innovation.
                 </p>
-                <a href="#" class="btn btn-primary">Explore More</a>
+                <a href="https://www.hatchwise.com/resources/the-history-of-the-ibm-logo" target="_blank" class="btn btn-primary">Explore More</a>
               </div>
               <div class="chart">
                 <canvas id="chart1" height="400" width="400"></canvas>
@@ -201,7 +200,7 @@
                   corporate social responsibility initiatives further enhance
                   IBM's public perception and overall goodwill.
                 </p>
-                <a href="#" class="btn btn-primary">Explore More</a>
+                <a href="https://www.macrotrends.net/stocks/charts/IBM/ibm/goodwill-intangible-assets-total" target="_blank" class="btn btn-primary">Explore More</a>
               </div>
             </div>
           </div>
@@ -223,7 +222,7 @@
                   high-margin businesses and innovation sustains its market
                   value over time.
                 </p>
-                <a href="#" class="btn btn-primary">Explore More</a>
+                <a href="https://growthhackers.com/growth-studies/ibm/" target="_blank" class="btn btn-primary">Explore More</a>
               </div>
               <div class="chart">
                 <canvas id="chart3" height="400" width="500"></canvas>

@@ -18,7 +18,7 @@
           class="form-control form-data"
           placeholder="Enter Your Name.."
         />
-        <small class="text-danger error"></small>
+        <small class="text-danger error my-1"></small>
       </div>
       <div class="form-element">
         <label for="email">Email</label>
@@ -29,7 +29,7 @@
           class="form-control form-data"
           placeholder="Enter Your Email.."
         />
-        <small class="text-danger error"></small>
+        <small class="text-danger error my-1"></small>
       </div>
       <div class="form-element">
         <label for="desc">Description</label>
@@ -41,16 +41,17 @@
           class="form-control form-data"
           placeholder="Enter Description about your problem.."
         ></textarea>
-        <small class="text-danger error"></small>
+        <small class="text-danger error my-1"></small>
       </div>
-      <div class="form-element">
+      <div class="form-element submit-btn">
         <input
           type="submit"
           id="submit"
           value="Submit"
-          class="btn btn-dark w-100"
           disabled
         />
+        <i class="fa-solid fa-xmark" id="wrong"></i>
+        <i class="fa-solid fa-check" id="correct"></i>
       </div>
     </form>
   </div>

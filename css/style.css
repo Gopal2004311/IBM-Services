@@ -384,6 +384,33 @@ p {
   margin-top: 2rem;
 }
 
+#contact .contact .contact-form form .submit-btn {
+  position: relative;
+}
+
+#contact .contact .contact-form form .submit-btn input {
+  width: 100%;
+  color: var(--light);
+  height: 2.3rem;
+  border: 1px solid var(--grayDark);
+  outline: none;
+  border-radius: 4px;
+  background-color: var(--grayDark);
+}
+#contact .contact .contact-form form .submit-btn i {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 36rem;
+  top: 0.3rem;
+  display: none;
+  color: var(--light);
+}
+
+.toggle {
+  background-color: var(--light-green);
+  color: var(--light);
+}
+
 .form-element textarea {
   resize: none;
 }
